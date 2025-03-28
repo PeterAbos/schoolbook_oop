@@ -2,7 +2,7 @@
 
 namespace App\Interfaces;
 
-class ControllerInterface 
+interface ControllerInterface 
 {
     function index();
     function show(int $id);
