@@ -2,6 +2,8 @@
 
 namespace App\Views;
 
+use Display;
+
 class View
 {
     public static function render(string $view, array $data = [], bool $useLayout = true) 
@@ -25,7 +27,7 @@ class View
         }
     }
 
-    private static function resolveViewPath(string $view) : string 
+    private static function resolveViewPath(string $view): string 
     {
         return __DIR__ . DIRECTORY_SEPARATOR . "$view.php";
     }
@@ -33,6 +35,6 @@ class View
     private static function handleMissingView(string $viewFile): void 
     {
         error_log("View not found: $viewFile");
-        Display::message("View '$viewFile' not found.", 'error');
+        Display::message("View '$viewFile' not found.");
     }
 }
