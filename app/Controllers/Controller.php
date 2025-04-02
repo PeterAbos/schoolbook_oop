@@ -4,6 +4,7 @@ namespace App\Controllers;
 
 use App\Interfaces\ControllerInterface;
 use App\Models\Model;
+use App\Views\View;
 
 abstract class Controller implements ControllerInterface
 {
@@ -20,6 +21,11 @@ abstract class Controller implements ControllerInterface
     abstract function edit(int $id);
     abstract function update(int $id, array $data);
     abstract function delete(int $id);
+
+    protected function render(string $view, array $data = []): void
+    {
+        View::render($view, $data);
+    }
 
     protected function redirect(string $url): void
     {
