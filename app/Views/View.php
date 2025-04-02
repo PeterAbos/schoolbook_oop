@@ -2,8 +2,6 @@
 
 namespace App\Views;
 
-use Display;
-
 class View
 {
     public static function render(string $view, array $data = [], bool $useLayout = true) 
