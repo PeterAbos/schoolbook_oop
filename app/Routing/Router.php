@@ -8,7 +8,7 @@ class Router
 {
     public function handle(): void
     {
-        $method = strtoupper($_SESSION['REQUEST_METHOD']);
+        $method = strtoupper($_SERVER['REQUEST_METHOD']);
         $requestUri = $_SERVER['REQUEST_URI'];
 
         if ($method === 'POST' && isset($_POST['_method'])) {

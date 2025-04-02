@@ -1,0 +1,2 @@
+[02-Apr-2025 15:27:07 Europe/Berlin] PHP Warning:  Undefined array key "REQUEST_METHOD" in C:\xampp\htdocs\gyak\sc_oop\app\Routing\Router.php on line 11
+[02-Apr-2025 15:27:29 Europe/Berlin] PHP Warning:  Undefined array key "REQUEST_METHOD" in C:\xampp\htdocs\gyak\sc_oop\app\Routing\Router.php on line 11
