@@ -14,7 +14,7 @@ class ClassController extends Controller {
 
     public function index(): void
     {
-        $classes = $this->model->all(['order_by' => ['name'], 'direction' => ['ASC']]);
+        $classes = $this->model->all(['order_by' => ['year, code'], 'direction' => ['DESC']]);
         $this->render('classes/index', ['classes' => $classes]);
     }
 

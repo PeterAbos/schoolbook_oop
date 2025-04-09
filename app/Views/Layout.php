@@ -32,8 +32,9 @@ class Layout
         echo <<<HTML
         <nav class="navbar">
             <ul class="nav-list">
-                <li class="nav-button"><a href="/"><button style="button" title="Kezdőlap">Gomb</button></li>
+                <li class="nav-button"><a href="/"><button style="button" title="Kezdőlap">Kezdőlap</button></li>
                 <li class="nav-button"><a href="/subjects"><button style="button" title="Tantárgyak">Tantárgyak</button></li>
+                <li class="nav-button"><a href="/classes"><button style="button" title="Osztályok">Osztályok</button></li>
             </ul>
         </nav>
         HTML;

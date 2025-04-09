@@ -2,6 +2,7 @@
 namespace App\Routing;
 use App\Controllers\HomeController;
 use App\Controllers\SubjectController;
+use App\Controllers\ClassController;
 use App\Views\Display;
 
 class Router
@@ -47,6 +48,10 @@ class Router
             case '/subjects':
                 $subjectController = new SubjectController();
                 $subjectController->index();
+                break;
+            case '/classes':
+                $classController = new ClassController();
+                $classController->index();
                 break;
             default:
                 $this->notFound();
