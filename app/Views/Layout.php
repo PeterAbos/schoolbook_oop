@@ -13,6 +13,7 @@ class Layout
                 <title>$title</title>
 
                 <link href="/fontawesome/css/all.css" rel="stylesheet" type="text/css">
+                <link href="/css/school.css" rel="stylesheet" type="text/css">
             </head>
             <body>
         HTML;
