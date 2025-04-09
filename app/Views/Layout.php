@@ -11,6 +11,8 @@ class Layout
                 <meta charset="UTF-8">
                 <meta name="viewport" content="width=device-width, initial-scale=1.0">
                 <title>$title</title>
+
+                <link href="/fontawesome/css/all.css" rel="stylesheet" type="text/css">
             </head>
             <body>
         HTML;
@@ -30,8 +32,8 @@ class Layout
         echo <<<HTML
         <nav class="navbar">
             <ul class="nav-list">
-                <li class="nav-button"><a href="/"><button style="button" title="Kezdőlap"></button></li>
-                <li class="nav-button"><a href="/subjects"><button style="button" title="Tantárgyak"></button></li>
+                <li class="nav-button"><a href="/"><button style="button" title="Kezdőlap">Gomb</button></li>
+                <li class="nav-button"><a href="/subjects"><button style="button" title="Tantárgyak">Tantárgyak</button></li>
             </ul>
         </nav>
         HTML;
