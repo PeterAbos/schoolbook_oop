@@ -3,6 +3,7 @@ namespace App\Routing;
 use App\Controllers\HomeController;
 use App\Controllers\SubjectController;
 use App\Controllers\ClassController;
+use App\Models\Subject;
 use App\Views\Display;
 
 class Router
@@ -59,18 +60,64 @@ class Router
     }
 
     private function handlePostRequests(mixed $requestUri)
-    {}
+    {
+        $data = $this->filterPostData($_POST);
+        $id = $data['id'] ?? null;
+
+        switch ($requestUri) {
+            case '/subjects':
+                if(!empty($data)) {
+                    $subjectController = new SubjectController();
+                    $subjectController->save($data);
+                }
+                break;
+            case '/subjects/create':
+                $subjectController = new SubjectController();
+                $subjectController->create();
+                break;
+            case '/subjects/edit':
+                $subjectController = new SubjectController();
+                $subjectController->edit($id);
+                break;
+            default:
+            $this->notFound();
+        }
+    }
 
     private function handlePatchRequests(mixed $requestUri)
     {
         $data = $this->filterPostData($_POST);
         switch($requestUri) {
-
+            case '/subjects':
+                $id = $data['id'] ?? null;
+                $subjectController = new SubjectController();
+                $subjectController->update($id, $data);
+                break;
+            default:
+                $this->notFound();
         }
     }
 
     private function handleDeleteRequests(mixed $requestUri)
-    {}
+    {
+        $data = $this->filterPostData($_POST);
+
+        switch($requestUri) {
+            case '/subjects':
+                $subjectController = new SubjectController();
+                $subjectController->delete((int) $data['id']);
+                break;
+            default:
+                $this->notFound();
+        }
+    }
+
+    private function filterPostData(array $data): array
+    {
+        // Remove unnecessary keys in a clean and simple way
+        $filterKeys = ['_method', 'submit', 'btn-del', 'btn-save', 'btn-edit', 'btn-plus', 'btn-update'];
+        return array_diff_key($data, array_flip($filterKeys));
+    }
 
     private function methodNotAllowed(): void
     {
