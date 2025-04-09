@@ -62,7 +62,12 @@ class Router
     {}
 
     private function handlePatchRequests(mixed $requestUri)
-    {}
+    {
+        $data = $this->filterPostData($_POST);
+        switch($requestUri) {
+
+        }
+    }
 
     private function handleDeleteRequests(mixed $requestUri)
     {}
