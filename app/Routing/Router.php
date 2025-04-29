@@ -79,6 +79,20 @@ class Router
                 $subjectController = new SubjectController();
                 $subjectController->edit($id);
                 break;
+            case '/classes':
+                if(!empty($data)) {
+                    $classController = new ClassController();
+                    $classController->save($data);
+                }
+                break;
+            case '/classes/create':
+                $classController = new ClassController();
+                $classController->create();
+                break;
+            case '/classes/edit':
+                $classController = new ClassController();
+                $classController->edit($id);
+                break;
             default:
             $this->notFound();
         }
@@ -93,6 +107,11 @@ class Router
                 $subjectController = new SubjectController();
                 $subjectController->update($id, $data);
                 break;
+            case '/classes':
+                $id = $data['id'] ?? null;
+                $classController = new ClassController();
+                $classController->update($id, $data);
+                break;
             default:
                 $this->notFound();
         }
@@ -106,6 +125,10 @@ class Router
             case '/subjects':
                 $subjectController = new SubjectController();
                 $subjectController->delete((int) $data['id']);
+                break;
+            case '/classes':
+                $classController = new ClassController();
+                $classController->delete((int) $data['id']);
                 break;
             default:
                 $this->notFound();
