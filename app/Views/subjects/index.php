@@ -22,7 +22,7 @@ foreach ($subjects as $subject) {
 }
 
 $html = <<<HTML
-        <table id='admin-subjects-table' class='admin-subjects-table'>
+        <table id='admin-subjects-table' class='admin-subjects-table tabla'>
             <thead>
                 <tr>
                     <th>#</th>

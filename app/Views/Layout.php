@@ -14,6 +14,7 @@ class Layout
 
                 <link href="/fontawesome/css/all.css" rel="stylesheet" type="text/css">
                 <link href="/css/school.css" rel="stylesheet" type="text/css">
+                <link href="/css/sajat.css" rel="stylesheet" type="text/css">
             </head>
             <body>
         HTML;
