@@ -18,3 +18,8 @@
 [29-Apr-2025 15:08:59 Europe/Berlin] PHP Warning:  Undefined variable $classes in C:\xampp\htdocs\gyak\sc_oop\app\Views\classes\edit.php on line 10
 [29-Apr-2025 15:08:59 Europe/Berlin] PHP Warning:  Attempt to read property "year" on null in C:\xampp\htdocs\gyak\sc_oop\app\Views\classes\edit.php on line 10
 [29-Apr-2025 15:21:34 Europe/Berlin] SQLSTATE[42000]: Syntax error or access violation: 1103 Incorrect table name ''
+[14-May-2025 13:29:14 Europe/Berlin] SQLSTATE[42000]: Syntax error or access violation: 1103 Incorrect table name ''
+[14-May-2025 13:29:16 Europe/Berlin] SQLSTATE[42000]: Syntax error or access violation: 1103 Incorrect table name ''
+[14-May-2025 13:29:18 Europe/Berlin] SQLSTATE[42000]: Syntax error or access violation: 1103 Incorrect table name ''
+[14-May-2025 13:29:19 Europe/Berlin] SQLSTATE[42000]: Syntax error or access violation: 1103 Incorrect table name ''
+[14-May-2025 13:38:06 Europe/Berlin] SQLSTATE[42000]: Syntax error or access violation: 1103 Incorrect table name ''
